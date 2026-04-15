@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Campos</title>
+</head>
+<body>
+    <div class="container">
+        <img src="/public/Logo.png" alt="" class="logo">
+        <h2>Bem vindo</h2>
+
+        <input type="text" id="usuario" placeholder="usuario">
+        <input type="password" id="senha" placeholder="senha">
+
+        <p class="error" id="error">Preencha todos os campos</p>
+
+        <button onclick="Entrar()">Entrar</button>
+    </div>
+
+    <script>
+        function Entrar() {
+            let usuario = document.getElementById("usuario").value;
+            let senha = document.getElementById("senha").value;
+            let erro = document.getElementById("erro");
+
+            // Usuário e senha definidos
+            if (usuario === "admin" && senha === "1234") {
+                erro.style.display = "nome";
+                alert("Login realizado com sucesso");
+            } else {
+            erro.style.display = "block";
+            erro.innerText = "Usuário ou senha incorretos";
+            }
+        }
+    </script>
+</body>
+</html>
